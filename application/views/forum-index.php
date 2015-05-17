@@ -11,15 +11,12 @@
 <body>
 	<?php include 'signin.php'; ?>
 	<?php $nav = 'home'; include "navbar.php"; ?>
-
-	<div class="container">
-		<?php include 'loremipsum' ?>
-	</div>
 	<div id="box2" class="pad-section">
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
 	        <h3>Option #2</h3>
+	        <?php include 'loremipsum'; ?>
 	      </div>
 	    </div>
 	  </div>
@@ -33,5 +30,12 @@
 	    </div>
 	  </div>
 	</div>
+
+	<footer>
+	  <hr />
+	  <div class="container">
+	    <p class="text-right">Third Web Progamming Class' Project </p>
+	  </div>
+	</footer>
 </body>
 </html>

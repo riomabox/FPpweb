@@ -1,20 +1,18 @@
 
 $(document).ready(function(){
 
-// $(function() {
-//     //caches a jQuery object containing the header element
-//     var header = $(".navbar");
-//     $(window).scroll(function() {
-//         var scroll = $(window).scrollTop();
+$('a[href^="#"]').on('click', function(event) {
 
-//         if (scroll >= 25) {
-//             header.removeClass('navbar-default').addClass("navbar-inverse").addClass("navbar-fixed-top");
-//         } else {
-//             header.removeClass("navbar-inverse").addClass('navbar-default').removeClass("navbar-fixed-top");
-//         }
-//     });
-// });
+    var target = $( $(this).attr('href') );
 
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+
+});
 // buat modal signin sama register
 var options = {
     backdrop : true,
