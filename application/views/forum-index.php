@@ -119,8 +119,31 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	      <div class="col-sm-12 text-center">
 	        <h3>Tentang Kami</h3>
 	        <hr>
-	        <div class="col-sm-12 text-center">
-	        	
+	        <div class="col-sm-1"></div>
+	        <div class="col-sm-2">
+	        	<div class="kami text-center">
+	        		Freddy
+	        	</div>
+	        </div>
+	        <div class="col-sm-2">
+	        	<div class="kami">
+	        		Agha
+	        	</div>
+	        </div>
+	        <div class="col-sm-2">
+	        	<div class="kami">
+	        		Fikri
+	        	</div>
+	        </div>
+	        <div class="col-sm-2">
+	        	<div class="kami">
+	        		Rio
+	        	</div>
+	        </div>
+	        <div class="col-sm-2">
+	        	<div class="kami">
+	        		Anwar
+	        	</div>
 	        </div>
 	        <!-- <div class="col-sm-4 text-center"></div> -->
 	      </div>
@@ -132,6 +155,21 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	<footer>
 	  <div class="container text-right">
 	    <span class="glyphicon glyphicon-globe"></span> Langkah kecil dari <span>Kita</span> untuk <span>Mereka</span>
+	  <div class="container">
+	  	<div class="row">
+	        <div class="col-sm-2 text-right"><a href="#box1" class="footer-judul">Pweb#3</a></div>
+	        <div class="col-sm-3 text-left">
+	        	<a href="#box2">Alasan Kami</a><br>
+	        	<a href="#box3">Penyebab Kelaparan di Afrika</a><br>
+	        	<a href="#box4">Peta Kelaparan</a><br>
+	        	<a href="#box5">Donasi</a><br>
+	        </div>
+	        <div class="col-sm-7 text-left">
+	        	<a href="#box5" class="footer-judul">Forum</a><br>
+	        </div>
+	      </div>
+	    </div>
+	  </div>  
 	  </div>
 	</footer>
 </body>
