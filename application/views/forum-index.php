@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forum - Front Page</title>
+	<title>Front Page</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
+	<link rel="icon" type="image/jg" href="<?php echo base_url(); ?>assets/images/favico.ico">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -45,7 +46,7 @@
 hanya sebesar $1.25 atau kurang.<br>
 	      </div>
 	      <div class="col-sm-4 text-center">
-	      	<span class="glyphicon glyphicon-certificate"></span>	      
+	      	<span class="glyphicon glyphicon-fire"></span>	      
 	      	<div class="text-center box3-judul">Konflik</div>
 	      	Konflik adalah sumber dari kesengsaraan manusia, termasuk kemiskinan dan kelaparan.
 Tingkat kemiskinan naik 20 persen untuk negara yang diselimuti konflik di 3 dekade terakhir.<br>
@@ -93,6 +94,40 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	  </div>
 	</div>
 	<!-- Peta -->
+
+	<!-- Donasi -->
+	<div id="box5" class="pad-section">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-sm-12 text-center">
+	        <h3>Bagaimana anda bisa membantu mereka</h3>
+	        <hr>
+	        <div class="col-sm-12 text-center">
+	        	
+	        </div>
+	        <!-- <div class="col-sm-4 text-center"></div> -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Donasi -->
+
+	<!-- Tentang Kami -->
+	<div id="box4" class="pad-section">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-sm-12 text-center">
+	        <h3>Tentang Kami</h3>
+	        <hr>
+	        <div class="col-sm-12 text-center">
+	        	
+	        </div>
+	        <!-- <div class="col-sm-4 text-center"></div> -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Tentang Kami -->
 
 	<footer>
 	  <div class="container text-right">

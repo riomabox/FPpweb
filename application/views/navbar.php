@@ -21,6 +21,8 @@
         <li class="box1"><a href="#box2">Alasan</a></li>
         <li><a href="#box3">Penyebab</a></li>
         <li><a href="#box4">Peta Kelaparan</a></li>
+        <li><a href="#box5">Donasi</a></li>
+        <li><a href="#box6">Tentang Kami</a></li>
         <li><a href="javascript:void(0);">Forum</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

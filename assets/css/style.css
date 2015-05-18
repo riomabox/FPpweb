@@ -47,12 +47,12 @@ body {
   z-index: -1;
 }
 
-#box2, #box4 {
+#box2, #box4, #box6 {
   background: #3A8285 url("../images/background.jpg") no-repeat scroll 50% 50% / cover;
   color: white;
 }
 
-#box3 {
+#box3, #box5 {
   height: 100%;
   background-color: white;
 }
@@ -67,7 +67,7 @@ body {
   color: white;
 }
 
-#box3 hr{
+#box3 hr, #box5 hr{
   border-color: black;
 }
 
