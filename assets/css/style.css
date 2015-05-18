@@ -2,11 +2,18 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin-bottom: 600px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .pad-section { padding: 50px 0; }
 
 .pad-section img { width: 100%; }
+
+#pad-nav{
+  height: 53px;
+  background-color: #EA8200;
+}
 
 .text-vcenter {
   display: table-cell;
@@ -22,22 +29,42 @@ body {
 }
 
 #box1 {
-  background: darkblue;
   color: white;
   display: table;
   height: 300px;
   width: 100%;
+  background-color: transparent;
+}
+
+#box-box1{
+  background-image: url('../images/banner.jpg');
+  position: fixed;
+  height: 300px;
+  width: 100%;
+  z-index: -2;
+}
+
+#box-box2{
+  background-color: rgba(18,64,60,0.5);
+  height: 300px;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
 }
 
 #box2 {
-  background-color: #EA8200;
+  background: #3A8285 url("../images/background.jpg") no-repeat scroll 50% 50% / cover;
   color: white;
+  offset: 53px;
 }
 
 #box3 {
-  background-color: #182C3C;
-  color: white;
   height: 100%;
+  background-color: white;
+}
+
+.navbar-default{
+  border-radius: 0;
 }
 
 .navbar-default .navbar-nav > .active > a{
@@ -48,17 +75,24 @@ body {
 	margin-bottom: 0;
 }
 
-.goToTop {
+#goToTop {
   position: fixed;
   top: 0;
   height: 53px;
   z-index: 1;
-  background-color: darkblue;
+  background-color: #3A3E3E;
   transition : background-color 0.3s ease-in;
+  border-color: transparent;
+  border-radius: 0px;
 }
 
-.goToTop .navbar-nav > li > a{
-	background-color: darkblue;
+.navbar-nav > li > a{
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+#goToTop .navbar-nav > li > a,#goToTop .navbar-brand{
+	background-color: #3A3E3E;
 	color: white;
 	transition : background-color 0.3s ease-in,
 					color 0.3s ease-in;
@@ -94,11 +128,33 @@ body.modal-open {
 	font-weight: bold;
 }
 
-footer { padding: 20px 0; }
-
-footer .glyphicon {
-  color: #333333;
-  font-size: 60px;
+.modal-header{
+  background-color: #3A3E3E;
+  color: white;
 }
 
-footer .glyphicon:hover { color: #EE2E24; }
+.modal-header button{
+  color: red;
+}
+
+.close:hover{
+  color: red;
+}
+
+footer { 
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  color: white;
+  width: 100%;
+  background: #3A3E3E none repeat scroll 0% 0%;
+  font-weight: 400;
+  font-size: 0.9em;
+ }
+
+footer span{
+  color: yellow;
+}
+
+footer .glyphicon{ color: #3A8285; }

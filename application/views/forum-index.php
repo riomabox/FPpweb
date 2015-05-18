@@ -35,9 +35,8 @@
 	</div>
 
 	<footer>
-	  <hr />
-	  <div class="container">
-	    <p class="text-right">Third Web Progamming Class' Project </p>
+	  <div class="container text-right">
+	    <span class="glyphicon glyphicon-globe"></span> Langkah kecil dari <span>Kita</span> untuk <span>Mereka</span>
 	  </div>
 	</footer>
 </body>

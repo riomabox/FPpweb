@@ -4,11 +4,11 @@ $(document).ready(function(){
 $('a[href^="#"]').on('click', function(event) {
 
     var target = $( $(this).attr('href') );
-
-    if( target.length ) {
+	
+	if( target.length ) {
         event.preventDefault();
         $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top-53
         }, 500);
     }
 
@@ -31,7 +31,8 @@ $('#registerModal').modal(
 $(document).ready(function(){
     $(window).bind('scroll', function() {
         var navHeight = $("#box1").height();
-        ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
+        // ($(window).scrollTop() > navHeight) ? $('nav').addClass('goToTop') : $('nav').removeClass('goToTop');
+        ($(window).scrollTop() > navHeight) ? $('nav').attr('id','goToTop') : $('nav').attr('id','');
     });
 });
 
