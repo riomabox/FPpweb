@@ -53,6 +53,15 @@ body {
   top: 0;
   height: 53px;
   z-index: 1;
+  background-color: darkblue;
+  transition : background-color 0.3s ease-in;
+}
+
+.goToTop .navbar-nav > li > a{
+	background-color: darkblue;
+	color: white;
+	transition : background-color 0.3s ease-in,
+					color 0.3s ease-in;
 }
 
 nav {

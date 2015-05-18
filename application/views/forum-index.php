@@ -16,7 +16,8 @@
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
 	        <h3>Option #2</h3>
-	        <?php include 'loremipsum'; ?>
+	        <div class="col-sm-4 text-center"></div>
+	        <div class="col-sm-4 text-center"></div>
 	      </div>
 	    </div>
 	  </div>
@@ -25,7 +26,9 @@
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
-	        <h3>Option #3</h3>
+	      	<h3>How Bad The Hunger is in Africa</h3>
+	      	<br>
+	        <?php include 'africa.php';?>
 	      </div>
 	    </div>
 	  </div>

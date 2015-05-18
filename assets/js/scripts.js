@@ -19,6 +19,7 @@ var options = {
     show: false,
     keyboard: true
 };
+
 $('#loginModal').modal(
 	options
 );
