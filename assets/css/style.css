@@ -1,19 +1,14 @@
 html,
 body {
-  height: 100%;
+  height: auto;
   width: 100%;
-  margin-bottom: 600px;
+  margin-bottom: 200px;
   font-family: 'Open Sans', sans-serif;
 }
 
 .pad-section { padding: 50px 0; }
 
 .pad-section img { width: 100%; }
-
-#pad-nav{
-  height: 53px;
-  background-color: #EA8200;
-}
 
 .text-vcenter {
   display: table-cell;
@@ -52,15 +47,28 @@ body {
   z-index: -1;
 }
 
-#box2 {
+#box2, #box4 {
   background: #3A8285 url("../images/background.jpg") no-repeat scroll 50% 50% / cover;
   color: white;
-  offset: 53px;
 }
 
 #box3 {
   height: 100%;
   background-color: white;
+}
+
+#box3 .glyphicon{
+  font-size: 100px;
+  color: #49A3A7;
+}
+
+.box3-judul{
+  background-color: black;
+  color: white;
+}
+
+#box3 hr{
+  border-color: black;
 }
 
 .navbar-default{
@@ -145,9 +153,10 @@ footer {
   padding: 20px 0;
   position: fixed;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
   color: white;
   width: 100%;
+  height: 200px;
   background: #3A3E3E none repeat scroll 0% 0%;
   font-weight: 400;
   font-size: 0.9em;

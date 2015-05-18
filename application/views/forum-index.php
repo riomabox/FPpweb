@@ -11,28 +11,88 @@
 <body>
 	<?php include 'signin.php'; ?>
 	<?php $nav = 'home'; include "navbar.php"; ?>
+
+	<!-- Keadaan -->
 	<div id="box2" class="pad-section">
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
-	        <h3>Option #2</h3>
-	        <div class="col-sm-4 text-center"></div>
+	        <h3>Keadaan Afrika Sekarang</h3>
+	        <hr>
+	        <div class="col-sm-12 text-center">
+	        	<?php include 'box2'; ?>
+	        </div>
 	        <div class="col-sm-4 text-center"></div>
 	      </div>
 	    </div>
 	  </div>
 	</div>
+	<!-- Keadaan -->
+
+	<!-- Penyebab -->
 	<div id="box3" class="pad-section">
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
-	      	<h3>How Bad The Hunger is in Africa</h3>
-	      	<br>
-	        <?php include 'africa.php';?>
+	      	<h3>Apa yang menyebabkan kelaparan dan kemiskinan di Afrika?
+</h3>
+			<hr>
+	      </div>
+	      <div class="col-sm-4 text-center">
+	      	<span class="glyphicon glyphicon-usd"></span>
+	      	<div class="text-center box3-judul">Kemiskinan</div>
+	      	Sekitar 47 persen dari populasi di sub-sahara afrika hidup dengan penghasilan
+hanya sebesar $1.25 atau kurang.<br>
+	      </div>
+	      <div class="col-sm-4 text-center">
+	      	<span class="glyphicon glyphicon-certificate"></span>	      
+	      	<div class="text-center box3-judul">Konflik</div>
+	      	Konflik adalah sumber dari kesengsaraan manusia, termasuk kemiskinan dan kelaparan.
+Tingkat kemiskinan naik 20 persen untuk negara yang diselimuti konflik di 3 dekade terakhir.<br>
+	      </div>
+	      <div class="col-sm-4 text-center">
+	      <span class="glyphicon glyphicon-piggy-bank"></span>	
+	      	<div class="text-center box3-judul">Sistem Ekonomi yang Buruk</div>
+	      	Kontrol dari sumber daya dan penghasilan berbasis militer dan kekuatan
+politik menjadikan orang - orang minoritas semakin terpuruk.<br>
+	      </div>
+	      <div class="col-sm-6 text-center">
+	      <span class="glyphicon glyphicon-tree-deciduous"></span>	
+	      	<div class="text-center box3-judul">Lingkungan</div>
+	      	Afrika menghadapi ancaman lingkungan yang benar benar serius, termasuk erosi,
+perluasan padang pasir, penbangan hutan dan yang terpenting adalah kekeringan dan
+kurangnya sumber air yang mana hal ini berdampak pada sektor agrikultur dan akhirnya
+menuju ke kelaparan.<br>
+	      </div>
+	      <div class="col-sm-6 text-center">
+	      <span class="glyphicon glyphicon-stats"></span>
+	      	<div class="text-center box3-judul">Pertumbuhan Populasi</div>
+	      	Populasi di afrika berkembang dengan sangat cepat. Dari 221 juta di tahun 1950 menjadi
+1 miliar jiwa di tahun 2009. Afrika, sebagai benua yang paling miskin memiliki pertumbuhan jiwa
+yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan kelaparan di benua ini.
 	      </div>
 	    </div>
 	  </div>
 	</div>
+	<!-- Penyebab -->
+
+
+	<!-- Peta -->
+	<div id="box4" class="pad-section">
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-sm-12 text-center">
+	        <h3>Peta Kelaparan Afrika</h3>
+	        <hr>
+	        <div class="col-sm-12 text-center">
+	        	<?php include 'africa.php'; ?>
+	        </div>
+	        <!-- <div class="col-sm-4 text-center"></div> -->
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Peta -->
 
 	<footer>
 	  <div class="container text-right">

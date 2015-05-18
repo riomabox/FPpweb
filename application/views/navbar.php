@@ -4,7 +4,7 @@
 <div id="box-box2"></div>
 <div id="box1" class="home" >
   <div class="text-vcenter">
-    <h1>No More Hunger in Africa</h1>
+    <h1>Hapus Kelaparan Afrika</h1>
  </div>
 </div>
 <!-- /box1 --> 
@@ -18,10 +18,10 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav">
         <li <?php if($nav == 'home')echo "class=active";?>><a href="#box1"><span class="glyphicon glyphicon-home"></span></a></li>
-        <li class="box1"><a href="#box2">Menu Item #2</a></li>
-        <li><a href="#box3">Menu Item #3</a></li>
-        <li><a href="#">Menu Item #4</a></li>
-        <li><a href="javascript:void(0);">Menu Item #5</a></li>
+        <li class="box1"><a href="#box2">Alasan</a></li>
+        <li><a href="#box3">Penyebab</a></li>
+        <li><a href="#box4">Peta Kelaparan</a></li>
+        <li><a href="javascript:void(0);">Forum</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#" data-toggle="modal" data-target="#registerModal" ><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
