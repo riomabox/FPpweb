@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav">
         <li <?php if($nav == 'home')echo "class=active";?>><a href="#box1"><span class="glyphicon glyphicon-home"></span></a></li>
-        <li class="box1"><a href="#box2">Alasan</a></li>
+        <li><a href="#box2">Alasan</a></li>
         <li><a href="#box3">Penyebab</a></li>
         <li><a href="#box4">Peta Kelaparan</a></li>
         <li><a href="#box5">Donasi</a></li>

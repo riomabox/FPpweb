@@ -113,42 +113,58 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	<!-- Donasi -->
 
 	<!-- Tentang Kami -->
-	<div id="box4" class="pad-section">
+	<div id="box6" class="pad-section">
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-12 text-center">
 	        <h3>Tentang Kami</h3>
 	        <hr>
+	        Kami adalah sekelompok mahasiswa sebuah Institut di Jawa Timur yang berkeinginan agar semua orang di dunia bisa mendapat hak
+	        yang sama dalam hal kesejahteraan hidup, dimulai dengan kecukupan pangan.<br><br>
+	        Berangkat dari pemikiran di atas, kami memulai sebuah proyek untuk membantu mewadahi semua orang yang mempunyai keinginan yang sama
+	        dengan kami.<br><br>
+	        Harapan kami, dengan adanya situs ini, bisa membantu menyalurkan niat baik para relawan dan paling tidak bisa membantu mengurangi tingkat
+	        kelaparan di daerah yang dituju.<br><br>
+	      </div>
+	      <div class="col-sm-12 text-center">
 	        <div class="col-sm-1"></div>
 	        <div class="col-sm-2">
-	        	<div class="kami text-center">
-	        		Freddy
+	        	<div class="kami freddy">
+	        		<div class="layer">
+	        			Freddy
+	        		</div>
 	        	</div>
 	        </div>
 	        <div class="col-sm-2">
-	        	<div class="kami">
+	        	<div class="kami agha">
 	        		<div class="layer">
 	        			Agha
 	        		</div>
 	        	</div>
 	        </div>
 	        <div class="col-sm-2">
-	        	<div class="kami">
-	        		Fikri
+	        	<div class="kami fikri">
+	        		<div class="layer">
+	        			Fikri
+	        		</div>
 	        	</div>
 	        </div>
 	        <div class="col-sm-2">
-	        	<div class="kami">
-	        		Rio
+	        	<div class="kami rio">
+	        		<div class="layer">
+	        			Rio
+	        		</div>
 	        	</div>
 	        </div>
 	        <div class="col-sm-2">
-	        	<div class="kami">
-	        		Anwar
+	        	<div class="kami anwar">
+	        		<div class="layer">
+	        			Anwar
+	        		</div>
 	        	</div>
 	        </div>
+	     </div>
 	        <!-- <div class="col-sm-4 text-center"></div> -->
-	      </div>
 	    </div>
 	  </div>
 	</div>

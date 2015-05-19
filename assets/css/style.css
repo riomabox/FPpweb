@@ -34,13 +34,13 @@ body {
 #box-box1{
   background-image: url('../images/banner.jpg');
   position: fixed;
-  height: 300px;
+  height: 500px;
   width: 100%;
   z-index: -2;
 }
 
 #box-box2{
-  background-color: rgba(18,64,60,0.5);
+  background-color: rgba(18,64,60,0.8);
   height: 300px;
   width: 100%;
   position: fixed;
@@ -99,11 +99,22 @@ body {
   font-size: 0.9em;
 }
 
+.navbar-default .navbar-nav > li > a:hover, #goToTop .navbar-nav > li > a:hover{
+  color: white;
+  background-color: #FF8F26;
+  transition : background-color 0.3s ease-in,
+          color 0.3s ease-in;
+}
+
 #goToTop .navbar-nav > li > a,#goToTop .navbar-brand{
 	background-color: #3A3E3E;
 	color: white;
 	transition : background-color 0.3s ease-in,
 					color 0.3s ease-in;
+}
+
+#goToTop .navbar-nav > .active > a{
+  background-color: rgba(2,2,2,0.6);
 }
 
 nav {
@@ -155,8 +166,19 @@ body.modal-open {
   border-radius: 90px;
   margin-left: 20%;
   color: black;
-  background:url("../images/agha.jpg") no-repeat scroll 50% 50% / cover;
   z-index: -2;
+}
+
+.agha{
+  background:url("../images/agha.jpg") no-repeat scroll 50% 50% / cover;
+}.fikri{
+  background:url("../images/fikri.jpg") no-repeat scroll 50% 50% / cover;
+}.rio{
+  background:url("../images/rio.jpg") no-repeat scroll 50% 50% / cover;
+}.anwar{
+  background:url("../images/anwar.jpg") no-repeat scroll 50% 50% / cover;
+}.freddy{
+  background:url("../images/freddy.jpg") no-repeat scroll 50% 50% / cover;
 }
 
 .layer{
