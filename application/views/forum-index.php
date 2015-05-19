@@ -127,7 +127,9 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	        </div>
 	        <div class="col-sm-2">
 	        	<div class="kami">
-	        		Agha
+	        		<div class="layer">
+	        			Agha
+	        		</div>
 	        	</div>
 	        </div>
 	        <div class="col-sm-2">
