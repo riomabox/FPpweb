@@ -52,7 +52,7 @@
 	              <input class="form-control input" placeholder="Password" type="password">
 	            </div>
 	            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-				  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+				  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 150px;"></div>
 				  <div>
 				    <span class="btn btn-default btn-file"><span class="fileinput-new">Pilih Gambar Profil</span><span class="fileinput-exists">Ganti</span><input type="file" name="..."></span>
 				    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>

@@ -14,9 +14,26 @@ body.modal-open{
 	overflow: hidden;
 }
 
+.modal{
+	text-align: center;
+}
+
 .modal-header{
   background-color: #90C564;
   color: white;
+}
+
+.modal-text-header{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.modal-header button{
+  color: red;
+}
+
+.close:hover{
+  color: red;
 }
 
 .navbar{
@@ -35,17 +52,23 @@ body.modal-open{
 	margin-left: 3px;
 }
 
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a, .navbar .navbar-header a{
 	background-color: #90C564;
 	color: white;
-	font-weight: bold;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 30px;
 }
 
-.navbar-default .navbar-nav > li > a:active{
-	background-color: #90C564;
-}
-
-.navbar-default .navbar-nav > li > a:hover{
+.navbar-default .navbar-nav > li > a:hover, .navbar .navbar-header a:hover{
 	background-color: white;
 	color: #3A3E3E;
+}
+
+.navbar .navbar-header{
+	margin-left: 50px;
+}
+
+.navbar-default .navbar-nav > li > #kanan{
+	margin-right: 50px;
 }

@@ -145,23 +145,7 @@ body.modal-open {
     overflow: hidden;
 }
 
-.modal-text-header{
-	font-size: 1.2em;
-	font-weight: bold;
-}
 
-.modal-header{
-  background-color: #3A3E3E;
-  color: white;
-}
-
-.modal-header button{
-  color: red;
-}
-
-.close:hover{
-  color: red;
-}
 
 .kami{
   height: 100px;
