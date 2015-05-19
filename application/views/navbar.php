@@ -23,11 +23,7 @@
         <li><a href="#box4">Peta Kelaparan</a></li>
         <li><a href="#box5">Donasi</a></li>
         <li><a href="#box6">Tentang Kami</a></li>
-        <li><a href="javascript:void(0);">Forum</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#registerModal" ><span class="glyphicon glyphicon-user"></span> Daftar</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Masuk</a></li>
+        <li><a href="http://localhost/FPpweb/page/forum">Forum</a></li>
       </ul>
     </div>
   </div>

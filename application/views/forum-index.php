@@ -10,7 +10,6 @@
     <script src="<?php echo base_url(); ?>assets/js/scripts.js" type="text/javascript"></script>
 </head>
 <body>
-	<?php include 'signin.php'; ?>
 	<?php $nav = 'home'; include "navbar.php"; ?>
 
 	<!-- Keadaan -->
@@ -123,7 +122,7 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	        yang sama dalam hal kesejahteraan hidup, dimulai dengan kecukupan pangan.<br><br>
 	        Berangkat dari pemikiran di atas, kami memulai sebuah proyek untuk membantu mewadahi semua orang yang mempunyai keinginan yang sama
 	        dengan kami.<br><br>
-	        Harapan kami, dengan adanya situs ini, bisa membantu menyalurkan niat baik para relawan dan paling tidak bisa membantu mengurangi tingkat
+	        Harapan kami dengan adanya situs ini, bisa membantu menyalurkan niat baik para relawan dan paling tidak bisa membantu mengurangi tingkat
 	        kelaparan di daerah yang dituju.<br><br>
 	      </div>
 	      <div class="col-sm-12 text-center">
