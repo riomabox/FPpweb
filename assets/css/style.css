@@ -40,7 +40,7 @@ body {
 }
 
 #box-box2{
-  background-color: rgba(255,153,0,0.5);
+  background-color: rgba(153, 102, 0,0.5);
   height: 300px;
   width: 100%;
   position: fixed;
@@ -104,7 +104,7 @@ body {
 
 .navbar-default .navbar-nav > li > a:hover, #goToTop .navbar-nav > li > a:hover{
   color: white;
-  background-color: #FF8F26;
+  background-color: #3A8285;
   transition : background-color 0.3s ease-in,
           color 0.3s ease-in;
 }

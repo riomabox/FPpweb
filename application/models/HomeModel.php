@@ -12,7 +12,6 @@ class HomeModel extends CI_Model{
         $this->db->insert('user', $data);
         return;
     }
-    
    
 }
 ?>
