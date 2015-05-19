@@ -4,7 +4,7 @@
 	<title>Front Page</title>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
 	<link rel="icon" type="image/jg" href="<?php echo base_url(); ?>assets/images/favico.ico">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/FPpweb/assets/css/style.css">
     <script src="<?php echo base_url(); ?>assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo base_url(); ?>assets/js/scripts.js" type="text/javascript"></script>
@@ -180,9 +180,10 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	        	<a href="#box3">Penyebab Kelaparan di Afrika</a><br>
 	        	<a href="#box4">Peta Kelaparan</a><br>
 	        	<a href="#box5">Donasi</a><br>
+	        	<a href="#box6">Tentang Kami</a><br>
 	        </div>
 	        <div class="col-sm-7 text-left">
-	        	<a href="#box5" class="footer-judul">Forum</a><br>
+	        	<a href="http://localhost/FPpweb/page/forum" class="footer-judul">Forum</a><br>
 	        </div>
 	      </div>
 	    </div>

@@ -6,6 +6,19 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.input, .modal-content, .thunmbnail, .btn, .fileinput-preview{
+	border-radius: 0;
+}
+
+body.modal-open{
+	overflow: hidden;
+}
+
+.modal-header{
+  background-color: #90C564;
+  color: white;
+}
+
 .navbar{
 	padding-top: 100px;
 	border: 0px;
@@ -26,6 +39,10 @@ body {
 	background-color: #90C564;
 	color: white;
 	font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:active{
+	background-color: #90C564;
 }
 
 .navbar-default .navbar-nav > li > a:hover{

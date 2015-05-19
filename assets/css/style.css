@@ -40,7 +40,7 @@ body {
 }
 
 #box-box2{
-  background-color: rgba(18,64,60,0.8);
+  background-color: rgba(255,153,0,0.5);
   height: 300px;
   width: 100%;
   position: fixed;
@@ -50,6 +50,7 @@ body {
 #box2, #box4, #box6 {
   background: #3A8285 url("../images/background.jpg") no-repeat scroll 50% 50% / cover;
   color: white;
+  font-size: 1.1em;
 }
 
 #box3, #box5 {
@@ -63,7 +64,7 @@ body {
 }
 
 .box3-judul{
-  background-color: black;
+  background-color: #3A3E3E;
   color: white;
 }
 
