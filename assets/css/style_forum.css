@@ -14,12 +14,18 @@ body.modal-open{
 	overflow: hidden;
 }
 
+.container{
+	margin: 0px  50px 160px 50px;
+	padding: 0;
+	width: auto;
+}
+
 .modal{
 	text-align: center;
 }
 
 .modal-header{
-  background-color: #90C564;
+  background-color: #3A3E3E;
   color: white;
 }
 
@@ -65,6 +71,10 @@ body.modal-open{
 	color: #3A3E3E;
 }
 
+.navbar-default .navbar-nav  li > a:link, .navbar .navbar-header a:link{
+	background-color: #ddd;
+}
+
 .navbar .navbar-header{
 	margin-left: 50px;
 }
@@ -72,3 +82,47 @@ body.modal-open{
 .navbar-default .navbar-nav > li > #kanan{
 	margin-right: 50px;
 }
+
+.pad-section { padding: 50px 0; }
+
+.pad-section img { width: 100%; }
+
+/*thread di sini*/
+.thread-category{
+	margin: 0;
+	padding: 5px 0px 5px 5px;
+	color: white;
+	font-size: 1.2em;
+	font-weight: 500;
+	background: #3A3E3E none repeat scroll 0% 0%;
+}
+
+#group1 .container{
+	margin-bottom: 30px;
+}
+
+.thread-subthreadlist{
+	background-color: #f5f5f5;
+	padding: 10px;
+}
+
+.thread-subthread{
+	background-color: white;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.subthread-icon{
+	font-size: 30px;
+	color: lightgrey;
+	margin: 0;
+	display: block;
+	margin-left: 15px;
+}
+
+.subthread-judul a{
+	font-size: 1.3em;
+	text-decoration: none;
+	color: black;
+}
+
+/*komen di sini*/

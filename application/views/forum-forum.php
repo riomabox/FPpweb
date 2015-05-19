@@ -12,7 +12,6 @@
 <body>
 	<?php include 'signin.php'; ?>
 	<nav class="navbar navbar-default">
-	<hr>
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand" href="#">Pweb#3 Forum</a>
@@ -31,6 +30,67 @@
 	    </div>
 	  </div>
 	</nav>
-	<<?php include 'loremipsum'; ?>
+	<div id="group1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<div class="thread-category">
+						Kategori Thread 1
+					</div>
+					<div class="thread-subthreadlist">
+						<div class="thread-subthread">
+							<div class="row">
+								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
+								<div class="col-sm-4"> 
+									<div class="subthread-judul"><a href="">subthread-1</a><br></div>
+									<div>blablabl</div>
+								</div>
+							</div>
+						</div>
+						<div class="thread-subthread">
+							<div class="row">
+								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
+								<div class="col-sm-4"> 
+									<div class="subthread-judul"><a href="">subthread-2</a><br></div>
+									<div>blablabl</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="group2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<div class="thread-category">
+						Kategori Thread 2
+					</div>
+					<div class="thread-subthreadlist">
+						<div class="thread-subthread">
+							<div class="row">
+								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
+								<div class="col-sm-4"> 
+									<div class="subthread-judul"><a href="">subthread-1</a><br></div>
+									<div>blablabl</div>
+								</div>
+							</div>
+						</div>
+						<div class="thread-subthread">
+							<div class="row">
+								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
+								<div class="col-sm-4"> 
+									<div class="subthread-judul"><a href="">subthread-2</a><br></div>
+									<div>blablabl</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -1,4 +1,3 @@
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <script src="<?php echo base_url(); ?>assets/js/jasny-bootstrap.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/jasny-bootstrap.min.css">
 	<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -6,7 +5,7 @@
 		  <div class="modal-content">
 		      <div class="modal-header">
 		          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-		          <div class="modal-text-header text-center">Masuk</div>
+		          <div class="modal-text-header text-center">Log In</div>
 		      </div>
 		      <div class="modal-body">
 		      		<div class="container-fluid">
@@ -17,15 +16,17 @@
 			            <div class="form-group">
 			              <input class="form-control input" placeholder="Password" type="password">
 			            </div>
-			            
+			            <div class="form-group">
+			              <button class="btn btn-primary btn btn-block">Sign In</button>
+			            </div>
+			          </form>
 		         	</div>
 		      </div>
-				      <div class="modal-footer">
-				          <div class="form-group">
-				          	<button class="btn btn-primary btn btn-block">Masuk</button>
-				          </div>
-					  </div>
-		      		</form>
+		      <div class="modal-footer">
+		          <div class="col-md-12">
+		          	<button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+				  </div>	
+		      </div>
 		  </div>
 	  </div>
 	</div>
@@ -35,38 +36,39 @@
 	  <div class="modal-content">
 	      <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	          <div class="modal-text-header text-center">Daftar</div>
+	          <div class="modal-text-header text-center">Register</div>
 	      </div>
 	      <div class="modal-body container-fluid">
-	          <form class="form col-md-12 center-block">
+	            <?php echo form_open('Page/create');?>
 	            <div class="form-group">
-	              <input class="form-control input" placeholder="Nama" type="text">
+	              <input class="form-control input" placeholder="Nama" type="text" name="nama" id="nama">
 	            </div>
 	            <div class="form-group">
-	              <input class="form-control input" placeholder="Username" type="text">
+	              <input class="form-control input" placeholder="Username" type="text" name="user" id="user">
 	            </div>
 	            <div class="form-group">
-	              <input class="form-control input" placeholder="Email" type="email">
+	              <input class="form-control input" placeholder="Email" type="email" name="email1" id="email1">
 	            </div>
 	            <div class="form-group">
-	              <input class="form-control input" placeholder="Password" type="password">
+	              <input class="form-control input" placeholder="Password" type="password" name="pass" id="pass">
 	            </div>
 	            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
-				  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 150px; height: 150px;"></div>
+				  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
 				  <div>
-				    <span class="btn btn-default btn-file"><span class="fileinput-new">Pilih Gambar Profil</span><span class="fileinput-exists">Ganti</span><input type="file" name="..."></span>
-				    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Hapus</a>
+				    <span class="btn btn-default btn-file"><span class="fileinput-new">Select Profile Picture</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+				    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 				  </div>
 				</div>
-	            
-	        
+	            <div class="form-group">
+	              <button class="btn btn-primary btn btn-block" name="create" id="create" type="submit">Register</button>
+	             </div>
+	            <?php echo form_close(); ?>
 	      </div>
-	      	<div class="modal-footer">
-	          	<div class="form-group">
-	              <button class="btn btn-primary btn btn-block">Daftar</button>
-	            </div>
-	      	</div>
-	      	</form>
+	      <div class="modal-footer">
+	          <div class="col-md-12">
+	          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+			  </div>	
+	      </div>
 	  </div>
 	  </div>
 	</div>
