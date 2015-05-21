@@ -168,27 +168,26 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
 	  </div>
 	</div>
 	<!-- Tentang Kami -->
-
-	<footer>
-	  <div class="container text-right">
-	    <span class="glyphicon glyphicon-globe"></span> Langkah kecil dari <span>Kita</span> untuk <span>Mereka</span>
-	  <div class="container">
-	  	<div class="row">
-	        <div class="col-sm-2 text-right"><a href="#box1" class="footer-judul">Pweb#3</a></div>
-	        <div class="col-sm-3 text-left">
-	        	<a href="#box2">Alasan Kami</a><br>
-	        	<a href="#box3">Penyebab Kelaparan di Afrika</a><br>
-	        	<a href="#box4">Peta Kelaparan</a><br>
-	        	<a href="#box5">Donasi</a><br>
-	        	<a href="#box6">Tentang Kami</a><br>
-	        </div>
-	        <div class="col-sm-7 text-left">
-	        	<a href="http://localhost/FPpweb/page/forum" class="footer-judul">Forum</a><br>
-	        </div>
-	      </div>
-	    </div>
-	  </div>  
-	  </div>
-	</footer>
 </body>
+<footer>
+  <div class="container text-right">
+    <span class="glyphicon glyphicon-globe"></span> Langkah kecil dari <span>Kita</span> untuk <span>Mereka</span>
+  <div class="container">
+  	<div class="row">
+        <div class="col-sm-2 text-right"><a href="#box1" class="footer-judul">Pweb#3</a></div>
+        <div class="col-sm-3 text-left">
+        	<a href="#box2">Alasan Kami</a><br>
+        	<a href="#box3">Penyebab Kelaparan di Afrika</a><br>
+        	<a href="#box4">Peta Kelaparan</a><br>
+        	<a href="#box5">Donasi</a><br>
+        	<a href="#box6">Tentang Kami</a><br>
+        </div>
+        <div class="col-sm-7 text-left">
+        	<a href="http://localhost/FPpweb/page/forum" class="footer-judul">Forum</a><br>
+        </div>
+      </div>
+    </div>
+  </div>  
+  </div>
+</footer>
 </html>

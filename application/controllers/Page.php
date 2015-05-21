@@ -18,6 +18,10 @@ class Page extends CI_Controller {
 		$this->load->view('forum-forum.php',$data);
 	}
 	
+	public function forumCat(){
+		$this->load->view('forum-category.php');
+	}
+
 	 function create()
     {
 		 $pass=md5($this->input->post('pass'));
