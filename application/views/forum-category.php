@@ -28,7 +28,7 @@
 							<div class="row">
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/forumCat">thread-1</a><br></div>
+									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/thread">thread-1</a><br></div>
 									<div>blablabl</div>
 								</div>
 							</div>
@@ -37,7 +37,7 @@
 							<div class="row">
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="">thread-2</a><br></div>
+									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/thread">thread-2</a><br></div>
 									<div>blablabl</div>
 								</div>
 							</div>

@@ -22,6 +22,14 @@ class Page extends CI_Controller {
 		$this->load->view('forum-category.php');
 	}
 
+	public function thread(){
+		$this->load->view('forum-thread.php');
+	}
+
+	public function profile(){
+		$this->load->view('forum-profile.php');
+	}
+
 	 function create()
     {
 		 $pass=md5($this->input->post('pass'));

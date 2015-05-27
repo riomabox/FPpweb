@@ -155,10 +155,152 @@ body.modal-open{
 .pad-right{padding-right:15px;}
 .pad-top{padding-top: 15px;}
 
+.gambarTS{
+	height: 70px;
+	width: 70px;
+	border: 1px solid lightgrey;
+	margin-left: 20px;
+}
+
+.judul_thread{
+	font-size: 2em;
+	font-weight: 500;
+}
+
+.timestamp{
+	font-size: 1em;
+	color: #999966;
+
+}
+
+.replysum{
+	margin-top: 20px;
+	padding: 10px;
+	color: white;
+	background-color: #3A3E3E;
+	font-weight: 5j00;
+	margin-left: 20px;
+}
+
 /*komen di sini*/
 
+.comment-wrapper, .profile-wrapper{
+	padding: 10px;
+	background-color: #F0f0f0;
+	margin-left: 20px;
+	padding-bottom: 20px;
+}
 
+.comment{
+	margin-left: 20px;
+	margin-right: 20px;
+}
 
+.c_head{
+	padding: 10px;
+	background-color: #C0C0C0;
+}
+
+.c_body{
+	background-color: white;
+}
+
+.c_profile, .c_comment{
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+.c_foto{
+	height: 100px;
+	width: 100px;
+	border: 1px solid lightgrey;
+	margin-left: 20%;
+}
+
+.c_comment_content, .profile_body{
+	margin-right: 30px;
+}
+
+.c_input{
+	margin-top: 50px;
+	background-color: #f0f0f0;
+}
+
+#c_input_form{
+	visibility: hidden;
+	display: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*profile di sini*/
+
+.profile-wrapper{
+	padding-right: 30px;
+}
+
+.profile-wrapper .gambarTS{
+	margin-left: 30%;
+}
+
+.profile-body{
+	padding: 20px 10px;
+	background-color: white;
+}
+
+.profile-nama{
+	font-size: 1.5em;
+}
+
+.profile-status{
+	background-color: #3A3E3E;
+	color: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.p-status-head{
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.p-status-column{
+	margin-bottom: 5px;	
+}
+
+.list-group{
+	margin-top: 10px;
+	margin-right: 0px;
+}
+
+.list-group-item{
+	border: 0px;
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{
+	background-color: #739240;
+	color: white;
+}
+
+.list-group-item:first-child, .list-group-item:last-child{
+	border-radius: 0px;
+}
+
+.a_thread{
+	color: black;
+	text-decoration: none;
+}
+
+.a_thread:hover{
+	font-weight: 600;
+	color: black;
+	text-decoration: none;
+}
+
+.list_thread{
+	background-color: transparent;
+	border-bottom: 1px solid lightgrey;
+}
 /*footer di sini*/
 .footerku{
 	margin: 0 20px;
