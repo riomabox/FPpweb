@@ -7,7 +7,7 @@ class Page extends CI_Controller {
 	}
 
 	public function forum(){
-		$this->load->model('HomeModel');
+		$this->load->model('LoginModel');
 		$data = array();
           if($query = $this->HomeModel->getData())
          {
