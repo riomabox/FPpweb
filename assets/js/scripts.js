@@ -36,4 +36,53 @@ $(document).ready(function(){
     });
 });
 
+var BASE_URL = location.origin;
+
+$(".p-menu").click(function(){
+    $(".p-menu").removeClass('active');
+    $(this).addClass('active');
+});
+
+$('#overview').click(function(){
+    $.ajax({
+        url: BASE_URL+'/FPpweb/page/stats', 
+        type: 'POST',
+        dataType: 'html',
+        success: function(response){
+         $('.profile-body').html(response);
+        }
+    });
+});
+
+$('#komentar').click(function(){
+    // $('.profile-body').load('page/komen');
+    $.ajax({
+        url: BASE_URL+'/FPpweb/page/komen',
+        type: 'POST',
+        dataType: 'html',
+        success: function(response){
+         $('.profile-body').html(response);
+        }
+    });
+});
+
+$('#thread').click(function(){
+    // $('.profile-body').load('page/komen');
+    $.ajax({
+        url: BASE_URL+'/FPpweb/page/trit',
+        type: 'POST',
+        dataType: 'html',
+        success: function(response){
+         $('.profile-body').html(response);
+        }
+    });
+});
+
+$(document).ajaxStart(function(){
+    $("#loading").css("display", "block");
+});
+$(document).ajaxComplete(function(){
+    $("#loading").css("display", "none");
+});
+
 });

@@ -30,6 +30,18 @@ class Page extends CI_Controller {
 		$this->load->view('forum-profile.php');
 	}
 
+	public function stats(){
+		$this->load->view('profile-overview.php');
+	}
+
+	public function komen(){
+		$this->load->view('profile-komentar.php');
+	}
+
+	public function trit(){
+		$this->load->view('profile-thread.php');
+	}
+
 	 function create()
     {
 		 $pass=md5($this->input->post('pass'));

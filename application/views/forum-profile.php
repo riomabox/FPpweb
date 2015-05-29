@@ -14,6 +14,9 @@
 <body>
 	<?php include 'navbar_forum.php'; ?>
 	<div id="group1">
+		<div id="loading">
+			<img src='<?php echo base_url(); ?>assets/images/preloader.GIF' width="100%" height="10px;" />
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 profile">
@@ -25,14 +28,15 @@
 										
 									</div>
 									 <div class="list-group">
-									 <a href=".?p=overview" class="list-group-item">Status</a>
-									 <a href=".?p=komentar" class="list-group-item">Komentar</a>
-									 <a href=".?p=thread" class="list-group-item">Judul Topik</a>
+									 
+									 <a href="#" class="list-group-item p-menu active" id="overview">Status</a>
+									 <a href="#" class="list-group-item p-menu" id="komentar">Komentar</a>
+									 <a href="#" class="list-group-item p-menu" id="thread">Judul Topik</a>
 									</div>
 
 								</div>
 								<div class="col-sm-10 profile-body">
-									<?php if(!isset($_GET['p']) || $_GET['p'] == 'overview'){
+									<?php 
 										echo "
 									<div class='p-overview'>
 										<div class='profile-nama'>
@@ -82,50 +86,7 @@
 											</div>
 										</div>
 									</div>
-									";}
-										elseif(isset($_GET['p']) && $_GET['p']=='komentar'){
-											echo "
-									<div class=\"p-komentar\">
-										<div class='profile-status'>
-											Komentar yang ditulis
-										</div>";
-										for ($i=0; $i < 2; $i++) { 
-											echo "
-										<div class=\"comment\">
-											<div class=\"col-sm-12 c_head\">
-												<a href=\"\" class=\"a_thread\">Di topik : [Judul Thread]</a>
-											</div>
-											<div class=\"col-sm-12 c_body\">
-												<div class=\"row\">
-													<div class=\"col-sm-12 c_comment\">
-														<div class=\"timestamp\">
-															timestamp
-														</div>
-														<div class=\"c_comment_content\">
-															blabla
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>";
-										}
-										echo "
-									</div>
-									";} elseif (isset($_GET['p']) && $_GET['p']=='thread') {
-										echo "
-									<div class=\"p-komentar\">
-										<div class=\"profile-status\">
-											Thread yang ditulis
-										</div>";
-										for ($i=0; $i < 100; $i++) { 
-										echo "<div class=\"col-sm-12 c_head list_thread\">
-											<a href=\"\" class=\"a_thread\">[Judul Thread]</a>
-											<div class=\"timestamp\">[waktu post]</div>
-										</div>";
-										}
-										
-									echo "</div>";
-									}?>
+									";?>
 								</div>
 							</div>
 						</div>
