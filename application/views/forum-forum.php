@@ -24,7 +24,7 @@
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
 									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/forumCat">subthread-1</a><br></div>
-									<div>blablabl</div>
+									<div>blababl</div>
 								</div>
 							</div>
 						</div>
