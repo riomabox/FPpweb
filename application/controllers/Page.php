@@ -27,7 +27,9 @@ class Page extends CI_Controller {
 	}
 
 	public function profile(){
-		$this->load->view('forum-profile.php');
+		$this->data['posts']=$this->HomeModel->getData();
+
+		$this->load->view('forum-profile.php',$this->data);
 	}
 
 	public function stats(){

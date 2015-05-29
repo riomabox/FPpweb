@@ -18,7 +18,7 @@
         <h1>Welcome User, You have signed in ......</h1>
         <?php
 
-            mysql_connect("localhost","root","") or die(mysql_error());
+            mysql_connect("10.151.34.159","root","") or die(mysql_error());
             mysql_select_db("fppweb") or die(mysql_error());
 
             $email = $_SESSION['username'];

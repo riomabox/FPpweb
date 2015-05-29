@@ -24,8 +24,12 @@
 						<div class="col-sm-11 profile-wrapper">
 							<div class="row">
 								<div class="col-sm-2">
-									<div class="gambarTS">
-										
+									<div >
+										<?php 
+                                            $pict='HomeController/foto';
+echo $pict;
+                                         echo '<img class="gambarTS" src="data:image/jpeg;base64,'.base64_encode( $pict).'"/>';
+                                        ?>
 									</div>
 									 <div class="list-group">
 									 
@@ -36,20 +40,26 @@
 
 								</div>
 								<div class="col-sm-10 profile-body">
-									<?php 
+									<?php foreach($posts as $post)
 										echo "
 									<div class='p-overview'>
 										<div class='profile-nama'>
-											ID user
+											ID user : $post->user_id
 										</div>
-										Menjadi member sejak [tanggal daftar]
+										Menjadi member sejak [$post->user_register]
 										<div class='profile-last-active timestamp'>
-											Last Active hh:mm:yy
+											Last Active $post->user_last_login
 										</div>
 										<div class='profile-status'>
 											Forum Statistik
 										</div>
 										<div class='row'>
+										<div class='col-sm-2 p-status-head text-right'>
+												Member username
+											</div>
+											<div class='col-sm-10 p-status-column'>
+											$post->user_username
+											</div>
 											<div class='col-sm-2 p-status-head text-right'>
 												Member Status
 											</div>
@@ -61,7 +71,7 @@
 												jumlah Post
 											</div>
 											<div class='col-sm-10 p-status-column'>
-												xxx
+											 $post->user_jumlah_post
 											</div>
 
 											<div class='col-sm-2 p-status-head text-right'>

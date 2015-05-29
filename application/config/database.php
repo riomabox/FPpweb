@@ -64,11 +64,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => '10.151.34.159',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'fppweb',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'mysqlI',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => TRUE,

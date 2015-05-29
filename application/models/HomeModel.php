@@ -3,15 +3,28 @@
 class HomeModel extends CI_Model{
     
     public function getData() {
-        $query = $this->db->get('user');
+    	$name=$_SESSION['username'];
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('user_email', $name);
+        $query=$this->db->get();
+        
         return $query->result();
     }
-    
-    public function add_data($data)
-    {
-        $this->db->insert('user', $data);
-        return;
+   
+ function tampil_upload(){
+         	$name=$_SESSION['username'];
+
+  $query = $this->db->query("SELECT * FROM user where user_email='$name'");
+  foreach($query->result_array() as $ok){
+   //header('Content-type: image');
+   $image = $ok['user_pict']; 
+  }
+  //header("Content-type: image/*");
+  return $image;
+   
     }
    
 }
 ?>
+
