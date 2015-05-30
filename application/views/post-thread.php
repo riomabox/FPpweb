@@ -28,13 +28,24 @@
 					
 					<div class="thread-subthreadlist">
 						<div class="thread-subthread post-thread">
+								<?php 
+									echo validation_errors();
+									echo form_open_multipart('page/createThread');
+									if(isset($_GET['s']) && $_GET['s']=='gagal'){
+										echo "
+											<div class=\"form-group\">
+												<label class='warningtext' for=\"thread-topic\" style='color:red' ><span id='warning' class='glyphicon glyphicon-remove'></span> Judul dan Isi Topik tidak boleh kosong.</label>
+											</div>			
+										";
+									}
+								?>
 								<div class="form-group">
 									<label for="thread-topic">Judul Topik</label>
-									<input class="form-control input" placeholder="" type="text" name="thread-title" id="thread-title">
+									<input class="form-control input" placeholder="" type="text" name="title" id="thread-title">
 								</div>
 								<div class="form-group">
 									<label for="thread-tag">Tag</label>
-									<input class="form-control input" placeholder="" type="text" name="thread-tag" id="thread-tag">
+									<input class="form-control input" placeholder="" type="text" name="tag" id="thread-tag">
 								</div>
 								<div class="form-group ">
 									<textarea name="content" id="thread-content" rows="10" cols="80"></textarea>
@@ -45,6 +56,7 @@
 								<div class="form-group">
 					              <button class="btn btn-success btn btn-block" name="create" id="create" type="submit">Submit</button>
 					           </div>
+					           <?php echo form_close(); ?>
 							</div>
 						</div>
 					</div>

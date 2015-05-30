@@ -1,6 +1,24 @@
 <?php
 // $userID = $('#userID').val();
-echo $id;
+foreach ($posts as $post) {
+	date_default_timezone_set('Asia/Bangkok');
+	$user_register = $post->user_register;
+	$user_register = strtotime($post->user_register);
+	$user_register = date("H:i:s d-M-y", $user_register);
+
+	$user_last_login = $post->user_last_login;
+	$user_last_login = strtotime($post->user_last_login);
+	$user_last_login = date("H:i:s d-M-y", $user_last_login);
+	$jumlah = $post->user_jumlah_post;
+	if($jumlah < 100){
+		$status = "Junior Member";
+	} elseif ($jumlah < 300) {
+		$status = "Member";
+	} elseif ($jumlah < 500) {
+		$status = "Member Tua";
+	} else {
+		$status = "Sesepuh";
+	}
 echo "
 <div class='p-overview'>
 		<div class='profile-nama'>

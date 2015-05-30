@@ -6,7 +6,7 @@ class Page extends CI_Controller {
 		$this->load->view('forum-index.php');
 	}
 
-	public function forum(){
+	public function forumCat(){
 		if(isset($_SESSION['username'])){
 			$this->load->model('LoginModel');
 			$data = array();
@@ -16,7 +16,7 @@ class Page extends CI_Controller {
 	     } else $this->load->view('forum-forum.php');		
 	}
 	
-	public function forumCat(){
+	public function forum(){
 		if(isset($_SESSION['username'])){
 			$this->load->model('LoginModel');
 			$data = array();
@@ -42,11 +42,13 @@ class Page extends CI_Controller {
 		$this->load->view('forum-profile.php',$this->data);
 	}
 
-	public function stats(){ 
-		$this->load->view('profile-overview.php');
+	public function stats($id){ 
+		$this->data['posts']=$this->HomeModel->getProfileData($id);
+		$this->load->view('profile-overview.php',$this->data);
 	}
 
 	public function komen(){
+		
 		$this->load->view('profile-komentar.php');
 	}
 
@@ -62,6 +64,22 @@ class Page extends CI_Controller {
 			$data['posts'] = $query;
 			$this->load->view('post-thread.php',$data);
 	     } else $this->load->view('post-thread.php');
+	}
+
+	public function createThread(){
+		$this->form_validation->set_rules('title','Judul','required');
+		$this->form_validation->set_rules('content','Isi','required');
+		if($this->form_validation->run() == false){
+			$this->form_validation->set_message('Judul dan isi topik tidak boleh kosong');
+			redirect('page/posting?s=gagal');
+		} else {
+			$title = $this->input->post('title');
+			$tag = $this->input->post('tag');
+			$content = $this->input->post('content');
+
+			$this->load->model('ThreadModel');
+			$this->ThreadModel->insert($title, $tag, $content);
+		}
 	}
 
 	 function create()

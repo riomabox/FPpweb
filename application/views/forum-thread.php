@@ -14,6 +14,7 @@
 <body>
 	<?php
 		if(isset($_SESSION['username'])){
+			$login = true;
 			foreach($posts as $post) { 
 				include 'navbar_forum.php';
 			};
@@ -26,7 +27,7 @@
 					<div class="row">
 						<div class="col-sm-1">
 							<div class="gambarTS">
-								<img src="../asssets/images">
+								
 							</div>
 						</div>
 						<div class="col-sm-10">
@@ -52,7 +53,7 @@
 								<!-- comment -->
 								<?php include 'thread-comment.php'; ?>
 								<!-- /comment -->
-								<?php include 'thread-form.php'; ?>
+								<?php if(isset($login))include 'thread-form.php'; ?>
 
 							</div>
 						</div>

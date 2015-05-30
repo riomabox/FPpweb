@@ -22,19 +22,19 @@
 			<div class="row">
 				<div class="col-sm-8 thread">
 					<div class="thread-category pad-left pad-bottom" style="background-color:white; color:black">
-						<h2 id="judul-sub">Judul Sub-Kategori</h2><br>
-						Penjelasan Sub-Kategori
+						<h2 id="judul-sub">Forum blablabla</h2><br>
+						Penjelasan Forum
 					</div>
 					<div class="col-sm-12 category-header">
-						<a href="">Most Viewed</a><t>
-						<a href="">Most Recent</a>
+						<a href="">Paling Banyak dilihat</a><t>
+						<a href="">Paling Baru</a>
 					</div>
 					<div class="thread-subthreadlist">
 						<div class="thread-subthread">
 							<div class="row">
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/thread">thread-1</a><br></div>
+									<div class="subthread-judul"><a href="<?php echo base_url(); ?>page/thread">thread-1</a><br></div>
 									<div>blablabl</div>
 								</div>
 							</div>
@@ -43,7 +43,7 @@
 							<div class="row">
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/thread">thread-2</a><br></div>
+									<div class="subthread-judul"><a href="<?php echo base_url(); ?>page/thread">thread-2</a><br></div>
 									<div>blablabl</div>
 								</div>
 							</div>

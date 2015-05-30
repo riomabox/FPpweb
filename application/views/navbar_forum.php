@@ -6,8 +6,8 @@
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="http://localhost/FPpweb/page/forum">Forum</a></li>
-        <li><a href="http://localhost/FPpweb/page/index">Web</a></li>
+        <li><a href="<?php echo base_url();?>page/forum">Forum</a></li>
+        <li><a href="<?php echo base_url();?>page/index">Web</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <?php
@@ -18,8 +18,9 @@
         }   
         else{
 
-       echo ' <li><a href="'.base_url().'page/profile/'.$post->user_id.'">Profil</a></li>';
-       echo '<li>  <a href ="'.base_url().'LoginController/logout" id="kanan">Keluar</a>';
+       echo '<li><a href="'.base_url().'page/profile/'.$post->user_id.'">Profil</a></li>';
+       echo '<li><a href="'.base_url().'page/posting">Tambah Topik</a></li>';
+       echo '<li><a href="'.base_url().'LoginController/logout" id="kanan">Keluar</a>';
    
         }
          ?>

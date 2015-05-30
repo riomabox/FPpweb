@@ -22,46 +22,15 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div class="thread-category">
-						Kategori Thread 1
+						Daftar Topik
 					</div>
 					<div class="thread-subthreadlist">
 						<div class="thread-subthread">
 							<div class="row">
 								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
 								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="http://localhost/FPpweb/page/forumCat">subthread-1</a><br></div>
+									<div class="subthread-judul"><a href="<?php echo base_url();?>page/forumCat">subthread-1</a><br></div>
 									<div>blababl</div>
-								</div>
-							</div>
-						</div>
-						<div class="thread-subthread">
-							<div class="row">
-								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
-								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="">subthread-2</a><br></div>
-									<div>blablabl</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="group2">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8">
-					<div class="thread-category">
-						Kategori Thread 2
-					</div>
-					<div class="thread-subthreadlist">
-						<div class="thread-subthread">
-							<div class="row">
-								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
-								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="">subthread-1</a><br></div>
-									<div>blablabl</div>
 								</div>
 							</div>
 						</div>
