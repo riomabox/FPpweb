@@ -1,3 +1,4 @@
+
 <?php
 // $userID = $('#userID').val();
 foreach ($posts as $post) {
@@ -22,11 +23,11 @@ foreach ($posts as $post) {
 echo "
 <div class='p-overview'>
 		<div class='profile-nama'>
-			ID User : $userID
+			ID : $post->user_username
 		</div>
-		Menjadi member sejak [tanggal daftar]
+		Menjadi member sejak [$user_register]
 		<div class='profile-last-active timestamp'>
-			Last Active hh:mm:yy
+			Terakhir Login : $user_last_login
 		</div>
 		<div class='profile-status'>
 			Forum Statistik
@@ -36,37 +37,21 @@ echo "
 				Member Status
 			</div>
 			<div class='col-sm-10 p-status-column'>
-				senior member bla bla bla
+				$status
 			</div>
-
 			<div class='col-sm-2 p-status-head text-right'>
-				jumlah Post
+				Jumlah Post
 			</div>
 			<div class='col-sm-10 p-status-column'>
-				xxx
+				$jumlah
 			</div>
-
 			<div class='col-sm-2 p-status-head text-right'>
-				Profil dilihat
+				Email
 			</div>
 			<div class='col-sm-10 p-status-column'>
-				x kali
-			</div>
-
-			<div class=\"col-sm-2 p-status-head text-right\">
-				Umur
-			</div>
-			<div class=\"col-sm-10 p-status-column\">
-				x tahun
-			</div>
-
-			<div class=\"col-sm-2 p-status-head text-right\">
-				Ulang Tahun
-			</div>
-			<div class=\"col-sm-10 p-status-column\">
-				dd-mm-yyyy
+				$post->user_email
 			</div>
 		</div>
 	</div>
-";
+";}
 	?>

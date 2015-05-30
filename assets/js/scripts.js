@@ -43,9 +43,9 @@ $(".p-menu").click(function(){
     $(this).addClass('active');
 });
 
-$('#overview').click(function(){
+function overview(aidi){
     $.ajax({
-        url: BASE_URL+'/FPpweb/page/stats', 
+        url: BASE_URL+'/FPpweb/page/stats/'+aidi,
         type: 'POST',
         data: { userId: $('#userID').val()},
         dataType: 'html',
@@ -53,30 +53,42 @@ $('#overview').click(function(){
          $('.profile-body').html(response);
         }
     });
+}
+
+$('#overview').click(function(){
+    overview(($('#userID').val()));
 });
+
+function komen(aidi){
+    $.ajax({
+        url: BASE_URL+'/FPpweb/page/komen/'+aidi,
+        type: 'POST',
+        data: { userId: $('#userID').val()},
+        dataType: 'html',
+        success: function(response){
+         $('.profile-body').html(response);
+        }
+    });
+}
 
 $('#komentar').click(function(){
-    // $('.profile-body').load('page/komen');
-    $.ajax({
-        url: BASE_URL+'/FPpweb/page/komen',
-        type: 'POST',
-        dataType: 'html',
-        success: function(response){
-         $('.profile-body').html(response);
-        }
-    });
+    komen(($('#userID').val()));
 });
 
-$('#thread').click(function(){
-    // $('.profile-body').load('page/komen');
+function trit(aidi){
     $.ajax({
-        url: BASE_URL+'/FPpweb/page/trit',
+        url: BASE_URL+'/FPpweb/page/trit/'+aidi,
         type: 'POST',
+        data: { userId: $('#userID').val()},
         dataType: 'html',
         success: function(response){
          $('.profile-body').html(response);
         }
     });
+}
+
+$('#thread').click(function(){
+    trit(($('#userID').val()));
 });
 
 $(document).ajaxStart(function(){
@@ -86,4 +98,9 @@ $(document).ajaxComplete(function(){
     $("#loading").css("display", "none");
 });
 
+$('#warning').click(function(){
+    $('.warningtext').hide();
 });
+
+});
+
