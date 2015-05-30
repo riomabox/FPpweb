@@ -22,18 +22,41 @@ class Page extends CI_Controller {
 			$data = array();
 			$query = $this->HomeModel->getData();
 			$data['posts'] = $query;
+			$this->load->model('ThreadModel');
+			$query = $this->ThreadModel->listThread();
+			$data['thread'] = $query;
 			$this->load->view('forum-category.php',$data);
-	     } else $this->load->view('forum-category.php');
+	     } else {
+	     	$this->load->model('ThreadModel');
+			$query = $this->ThreadModel->listThread();
+			$data['thread'] = $query;
+	     	$this->load->view('forum-category.php',$data);
+	     }
 	}
 
-	public function thread(){
+	public function thread($id){
 		if(isset($_SESSION['username'])){
 			$this->load->model('LoginModel');
 			$data = array();
 			$query = $this->HomeModel->getData();
 			$data['posts'] = $query;
+
+			$query = $this->HomeModel->thread($id);
+			$data['thread'] = $query;
+			$query = $this->HomeModel->getTS($id);
+			$data['TS'] = $query;
+			$query = $this->HomeModel->getK($id);
+			$data['komen'] = $query;
 			$this->load->view('forum-thread.php',$data);
-	     } else $this->load->view('forum-thread.php');
+	     } else {
+	     	$query = $this->HomeModel->thread($id);
+			$data['thread'] = $query;
+			$query = $this->HomeModel->getTS($id);
+			$data['TS'] = $query;
+			$query = $this->HomeModel->getK($id);
+			$data['komen'] = $query;
+	     	$this->load->view('forum-thread.php',$data);
+	     }
 	}
 
 	public function profile($id){
@@ -53,6 +76,7 @@ class Page extends CI_Controller {
 	}
 
 	public function trit(){
+
 		$this->load->view('profile-thread.php');
 	}
 
@@ -78,9 +102,30 @@ class Page extends CI_Controller {
 			$content = $this->input->post('content');
 
 			$this->load->model('ThreadModel');
-			$this->ThreadModel->insert($title, $tag, $content);
+			$idThread = $this->ThreadModel->insert($title, $tag, $content);
+			$this->thread($idThread);
 		}
 	}
+
+	public function createComment(){
+		$idT = $this->input->post('threadID');
+		$this->form_validation->set_rules('content','Isi','required');
+		if($this->form_validation->run() == false){
+			$this->form_validation->set_message('Isi Komentar tidak boleh kosong');
+			
+			$this->thread($idT);
+		} else {
+			$userID = $this->input->post('userID');
+			$threadId = $this->input->post('threadID');
+			$content = $this->input->post('content');
+
+			$this->load->model('ThreadModel');
+			$idThread = $this->ThreadModel->insertK($userID, $threadId, $content);
+			$this->thread($threadId);
+		}
+	}
+
+
 
 	 function create()
     {

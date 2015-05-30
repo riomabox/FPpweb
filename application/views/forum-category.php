@@ -29,26 +29,24 @@
 						<a href="">Paling Banyak dilihat</a><t>
 						<a href="">Paling Baru</a>
 					</div>
-					<div class="thread-subthreadlist">
-						<div class="thread-subthread">
-							<div class="row">
-								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
-								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="<?php echo base_url(); ?>page/thread">thread-1</a><br></div>
-									<div>blablabl</div>
+					<?php
+						foreach ($thread as $thr) {
+							echo "
+					<div class=\"thread-subthreadlist\">
+						<div class=\"thread-subthread\">
+							<div class=\"row\">
+								<div class=\"col-sm-1 subthread-icon\"><span class=\"glyphicon glyphicon-comment\"></span></div>
+								<div class=\"col-sm-11 subthread-isi\"> 
+									<div class=\"subthread-judul\"><a href=\"".base_url()."page/thread/$thr->thread_id\">$thr->thread_judul</a><br></div>
+									<div class=\"timestamp\">Dimulai oleh $thr->user_username pada $thr->thread_tanggal </div>
+									<div>$thr->thread_reply balasan</div>
 								</div>
 							</div>
 						</div>
-						<div class="thread-subthread">
-							<div class="row">
-								<div class="col-sm-1 subthread-icon"><span class="glyphicon glyphicon-comment"></span></div>
-								<div class="col-sm-4 subthread-isi"> 
-									<div class="subthread-judul"><a href="<?php echo base_url(); ?>page/thread">thread-2</a><br></div>
-									<div>blablabl</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					</div>";
+						}
+					?>
+					
 				</div>
 			</div>
 		</div>

@@ -22,14 +22,40 @@ class HomeModel extends CI_Model{
     
     return $query->result();
   }
-   
- function tampil_upload(){
-      $name=$_SESSION['username'];
 
-      $query = $this->db->query("SELECT * FROM user where user_email='$name'");
-      return $query->result;
-   
-    }
+  public function thread($id){
+    $this->db->select('*');
+    $this->db->from('thread');
+    $this->db->where('thread_id', $id);
+    $query= $this->db->get();
+
+    return $query->result();
+  }
+
+  public function getTS($id){
+    $this->db->select('user_id');
+    $this->db->from('thread');
+    $this->db->where('thread_id', $id);
+    $query= $this->db->get();
+    $userid = $query->result();
+
+    $this->db->select('*');
+    $this->db->from('user');
+    $this->db->where('user_id', $userid[0]->user_id);
+    $query= $this->db->get();
+
+    return $query->result();
+  }
+
+  public function getK($id){
+    $this->db->select('*');
+    $this->db->from('comment, user');
+    $this->db->where('comment.user_id = user.user_id');
+    $this->db->where('thread_id', $id);
+    $query= $this->db->get();
+
+    return $query->result();
+  }
    
 }
 ?>

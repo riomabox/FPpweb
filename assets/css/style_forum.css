@@ -159,7 +159,7 @@ body.modal-open{
 	height: 70px;
 	width: 70px;
 	border: 1px solid lightgrey;
-	margin-left: 20px;
+	/*margin-right: 20px;*/
 }
 
 .judul_thread{
@@ -215,6 +215,12 @@ body.modal-open{
 	width: 100px;
 	border: 1px solid lightgrey;
 	margin-left: 20%;
+}
+
+.c_foto .gambarTS{
+	height: 100px;
+	width: 100px;
+	
 }
 
 .c_comment_content, .profile_body{

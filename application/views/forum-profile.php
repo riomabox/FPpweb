@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+    error_reporting(E_ALL & ~E_WARNING);
+?>
+
 <html>
 <head>
 	<title>Forum | Sub-Kategori Name</title>
@@ -27,9 +31,20 @@
 									<div >
 										<?php 
 											
-          //                                $pict='HomeController/foto';
-										// echo $pict;
-                                         echo '<img class="gambarTS" src="data:image/jpeg;base64,'.base64_encode( $post->user_pict).'"/>';
+                                        // mysql_connect("10.151.34.159","root","") or die(mysql_error());
+                                        // mysql_select_db("fppweb") or die(mysql_error());
+
+                                        // $email = $_SESSION['username'];
+                                        // $image = mysql_query("SELECT * FROM user WHERE user_email='$email'");
+                                        // $image = mysql_fetch_assoc($image);
+                                        // $image = $image['user_pict'];
+
+                                        if($post->user_pict==NULL){
+                                            echo "<img class='gambarTS' src='".base_url()."assets/images/default.png' />";
+                                        }
+                                        else{
+                                            echo '<img class="gambarTS" src="data:image/jpeg;base64,'.base64_encode( $post->user_pict).'"/>';
+                                        }
                                         ?>
 									</div>
 									 <div class="list-group">

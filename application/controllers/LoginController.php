@@ -1,5 +1,8 @@
 <?php
+    error_reporting(E_ALL & ~E_WARNING);
+?>
 
+<?php
 class LoginController extends CI_Controller{
     public function index(){
         $this->load->view('forum-forum');

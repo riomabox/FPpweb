@@ -3,19 +3,22 @@
 class LoginModel extends CI_Model {
     public function login($name, $pass){
        
-        $this->db->select('user_email, user_password');
+        $this->db->select('user_email, user_password, user_id');
         $this->db->from('user');
         $this->db->where('user_email', $name);
         $this->db->where('user_password', $pass);
         $waktu=date("Y-m-d h:i:sa");
         $this->db->query("UPDATE user SET user_last_login='$waktu' where user_email='$name'");
-        
+
         $query = $this->db->get();
-        
+        $idid = $query->result();
+
         if($query->num_rows() == 1){
+            $data = array();
+
             $newdata = array(
             'username'  => $name,
-            'password'  => $pass
+            'userid' => $idid[0]->user_id
             );
             $this->session->set_userdata($newdata);
             return true;
