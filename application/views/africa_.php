@@ -1,42 +1,9 @@
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/datamaps.world.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <div id="map-container" style="margin-left:25%;position: relative; width: 50%; height: 600px; color: black"></div>
 <script>
-var dati=null;
-function lala (dita){
-        $.ajax({
-            method : "POST",
-            url : "../assets/ajax_home.php",
-            data : {id : dita}
-            
-        }). success(function(msg){ 
-				//console.log(msg);
-				dati=msg
-				
-				if(dati[0][1]==null)
-				dati[0][1]="tidak ada data";
-				else
-				{
-					dati[0][1]=dati[0][1].concat("%");
-				}
-				if(dati[1][1]==null)
-				dati[1][1]="tidak ada data";
-				else
-				{
-					dati[1][1]=dati[1][1].concat("%");
-				}
-				if(dati[2][1]==null)
-				dati[2][1]="tidak ada data";
-				else
-				{
-					dati[2][1]=dati[2][1].concat("%");
-				}
-				//alert(data); 
-				//return data;
-				});
-    }
     var map = new Datamap({
     	element: document.getElementById('map-container'),
     	scope: 'world',
@@ -46,19 +13,19 @@ function lala (dita){
 			.rotate([4.4, 0])
 			.scale(400)
 			.translate([element.offsetWidth / 2, element.offsetHeight / 2]);
-			var path = d3.geo.path()
+		var path = d3.geo.path()
 			.projection(projection);
 			return {path: path, projection: projection};
 		},
 		fills: {
-			//'Algeria' : "red",
-			//'Nigeria' : "blue",
+			'Algeria' : "red",
+			'Nigeria' : "blue",
 			defaultFill: "lightgrey"
 		},
 		data: {
 			'DZA':{
 				fillKey:'Algeria',
-				percentage:10
+				percentage:12
 			},
 			'NGA':{
 				fillKey:'Nigeria',
@@ -66,7 +33,7 @@ function lala (dita){
 			},
 			'ETH':{
 				fillKey:'Ethiopia',
-				percentage:19
+				percentage:12
 			},
 			'EGY':{
 				fillKey:'Egypt',
@@ -181,7 +148,7 @@ function lala (dita){
 				percentage:12
 			},
 			'TGO':{
-				fillKey:'Togo',
+				fillKey:'TGO',
 				percentage:12
 			},
 			'ERI':{
@@ -293,29 +260,11 @@ function lala (dita){
 		,
 		geographyConfig: {
 			popupTemplate: function (geo,data){
-                var lili=geo.properties.name;
-				//console.log(dump(data));
-                if(!(geo.properties.name=="Yemen"||geo.properties.name=="Saudi Arabia"||geo.properties.name=="Turkey"||geo.properties.name=="Pakistan"||geo.properties.name=="Israel"||geo.properties.name=="Greece"||geo.properties.name=="West Bank"||geo.properties.name=="Spain"||geo.properties.name=="Italy"||geo.properties.name=="Syria"||geo.properties.name=="Oman"||geo.properties.name=="Iran"||geo.properties.name=="Iraq"||geo.properties.name=="Portugal"||geo.properties.name=="Jordan"||geo.properties.name=="United Arab Emirates"||geo.properties.name=="Qatar"||geo.properties.name=="Bahrain"||geo.properties.name=="Kuwait"||geo.properties.name=="Lebanon"||geo.properties.name=="Cyprus"||geo.properties.name=="Malta"||geo.properties.name=="Afghanistan"||geo.properties.name=="Turkmenistan"||geo.properties.name=="Uzbekistan"||geo.properties.name=="Azerbaijan"||geo.properties.name=="Armenia"||geo.properties.name=="Northern Cyprus"))
-                   {
-                       lala(lili);
-				
-				
-                //console.log(lulu[0][0]);
 				return ['<div class="hoverinfo"><strong>',
-						'statistik kelaparan ' + lili,
-						'<br/>',
-						' pada tahun ' + dati[2][0]+ '  ' +dati[2][1]  ,
-						'<br />',
-						' pada tahun ' + dati[1][0]+ '  ' +dati[1][1]  ,
-						'<br />',
-						' pada tahun ' + dati[0][0]+ '  ' +dati[0][1]  ,
-						'<br />',
+						'Number of things in ' + geo.properties.name,
+						': ' + data.percentage,
 						'</strong></div>'].join('');
-                }
-            }
+			}
 		}
     });
-    
-    
 </script>
-

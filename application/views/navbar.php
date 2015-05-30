@@ -14,7 +14,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="#">Pweb#3</a></div>
+      <a class="navbar-brand" href="#">FFA</a></div>
     <div class="collapse navbar-collapse" id="navbar-collapse-main">
       <ul class="nav navbar-nav">
         <li <?php if($nav == 'home')echo "class=active";?>><a href="#box1"><span class="glyphicon glyphicon-home"></span></a></li>

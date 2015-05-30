@@ -1,6 +1,6 @@
 <div class="comment">
 	<div class="col-sm-11 c_head">
-		<?php echo $userID;?>
+		<a href="<?php echo base_url();?>page/profile/$idididid" class="username"><?php echo $userID;?></a>
 	</div>
 	<div class="col-sm-1 c_head text-right">
 		nomer

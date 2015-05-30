@@ -2,7 +2,7 @@
 
 class LoginModel extends CI_Model {
     public function login($name, $pass){
-       
+        date_default_timezone_set("Asia/Jakarta"); 
         $this->db->select('user_email, user_password, user_id');
         $this->db->from('user');
         $this->db->where('user_email', $name);
@@ -27,7 +27,7 @@ class LoginModel extends CI_Model {
         }
     }
     public function insert($signusername, $signemail, $signpassword){
-      
+        date_default_timezone_set("Asia/Jakarta"); 
         $data = array (
             'user_username' => $signusername,
             'user_email' => $signemail,

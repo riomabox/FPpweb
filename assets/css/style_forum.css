@@ -334,3 +334,14 @@ body.modal-open{
 .post-thread{
   padding: 10px;
 }
+
+.username{
+	color: #505050;
+	text-decoration: none;
+}
+
+.username:hover{
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+}

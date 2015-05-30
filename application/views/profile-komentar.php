@@ -3,20 +3,24 @@
 	<div class='profile-status'>
 		Komentar yang ditulis
 	</div>";
-	for ($i=0; $i < 2; $i++) { 
+	foreach ($komen as $k) {
+	 	$judul = $k->thread_judul;
+	 	$idT = $k->thread_id;
+	 	$timestamp = $k->comment_tanggal;
+	 	$content = $k->comment_isi;
 		echo "
 	<div class=\"comment\">
 		<div class=\"col-sm-12 c_head\">
-			<a href=\"\" class=\"a_thread\">Di topik : [Judul Thread]</a>
+			<a href=\"".base_url()."page/thread/$idT\" class=\"a_thread\">Di topik : [$judul]</a>
 		</div>
 		<div class=\"col-sm-12 c_body\">
 			<div class=\"row\">
 				<div class=\"col-sm-12 c_comment\">
 					<div class=\"timestamp\">
-						timestamp
+						$timestamp
 					</div>
 					<div class=\"c_comment_content\">
-						blabla
+						$content
 					</div>
 				</div>
 			</div>

@@ -56,7 +56,25 @@ class HomeModel extends CI_Model{
 
     return $query->result();
   }
-   
+  
+  public function profileKomen($id){
+    $this->db->select('comment_isi, thread_judul, comment_tanggal, thread.thread_id');
+    $this->db->from('comment, thread');
+    $this->db->where('comment.thread_id = thread.thread_id');
+    $this->db->where('comment.user_id', $id);
+    $query= $this->db->get();
+
+    return $query->result();
+  }
+
+  public function profileTrit($id){
+    $this->db->select('thread_isi, thread_judul, thread_tanggal, thread_id');
+    $this->db->from('thread');
+    $this->db->where('thread.user_id', $id);
+    $query= $this->db->get();
+
+    return $query->result();
+  }
 }
 ?>
 

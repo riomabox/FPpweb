@@ -2,7 +2,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="">Pweb#3 Forum</a>
+      <a class="navbar-brand" href="#">FFA</a>
     </div>
     <div>
       <ul class="nav navbar-nav">
@@ -20,7 +20,7 @@
 
        echo '<li><a href="'.base_url().'page/profile/'.$post->user_id.'">Profil</a></li>';
        echo '<li><a href="'.base_url().'page/posting">Tambah Topik</a></li>';
-       echo '<li><a href="'.base_url().'LoginController/logout" id="kanan">Keluar</a>';
+       echo '<li><a href="'.base_url().'page/logout" id="kanan">Keluar</a>';
    
         }
          ?>

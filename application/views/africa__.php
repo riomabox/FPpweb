@@ -2,18 +2,21 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/datamaps.world.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<div id="map-container" style="margin-left:25%;position: relative; width: 50%; height: 600px; color: black"></div>
+<div id="map-container" style="margin-left:25%;position: relative; width: 50%; height: 600px; color: black"><p><h2 style="text-align:center;">Tahun 2012</h2></p></div>
 <script>
+var global = null;
 var dati=null;
-function lala (dita){
+function lala (tahun){
+		var BASE_URL = location.origin;
         $.ajax({
             method : "POST",
             url : "../assets/ajax_home.php",
-            data : {id : dita}
+            data : {id : global, tahun : tahun}
             
         }). success(function(msg){ 
 				//console.log(msg);
 				dati=msg
+				console.log(msg);
 				
 				if(dati[0][1]==null)
 				dati[0][1]="tidak ada data";
@@ -21,18 +24,7 @@ function lala (dita){
 				{
 					dati[0][1]=dati[0][1].concat("%");
 				}
-				if(dati[1][1]==null)
-				dati[1][1]="tidak ada data";
-				else
-				{
-					dati[1][1]=dati[1][1].concat("%");
-				}
-				if(dati[2][1]==null)
-				dati[2][1]="tidak ada data";
-				else
-				{
-					dati[2][1]=dati[2][1].concat("%");
-				}
+				
 				//alert(data); 
 				//return data;
 				});
@@ -294,21 +286,18 @@ function lala (dita){
 		geographyConfig: {
 			popupTemplate: function (geo,data){
                 var lili=geo.properties.name;
+                global = lili;
 				//console.log(dump(data));
                 if(!(geo.properties.name=="Yemen"||geo.properties.name=="Saudi Arabia"||geo.properties.name=="Turkey"||geo.properties.name=="Pakistan"||geo.properties.name=="Israel"||geo.properties.name=="Greece"||geo.properties.name=="West Bank"||geo.properties.name=="Spain"||geo.properties.name=="Italy"||geo.properties.name=="Syria"||geo.properties.name=="Oman"||geo.properties.name=="Iran"||geo.properties.name=="Iraq"||geo.properties.name=="Portugal"||geo.properties.name=="Jordan"||geo.properties.name=="United Arab Emirates"||geo.properties.name=="Qatar"||geo.properties.name=="Bahrain"||geo.properties.name=="Kuwait"||geo.properties.name=="Lebanon"||geo.properties.name=="Cyprus"||geo.properties.name=="Malta"||geo.properties.name=="Afghanistan"||geo.properties.name=="Turkmenistan"||geo.properties.name=="Uzbekistan"||geo.properties.name=="Azerbaijan"||geo.properties.name=="Armenia"||geo.properties.name=="Northern Cyprus"))
                    {
-                       lala(lili);
+                       lala(2012);
 				
 				
                 //console.log(lulu[0][0]);
 				return ['<div class="hoverinfo"><strong>',
-						'statistik kelaparan ' + lili,
+						'Statistik Kelaparan ' + lili,
 						'<br/>',
-						' pada tahun ' + dati[2][0]+ '  ' +dati[2][1]  ,
-						'<br />',
-						' pada tahun ' + dati[1][0]+ '  ' +dati[1][1]  ,
-						'<br />',
-						' pada tahun ' + dati[0][0]+ '  ' +dati[0][1]  ,
+						' Pada Tahun ' + dati[0][0]+ '  ' +dati[0][1]  ,
 						'<br />',
 						'</strong></div>'].join('');
                 }
@@ -317,5 +306,9 @@ function lala (dita){
     });
     
     
+	//window.alert(5 + 6);
 </script>
 
+        <button onclick="lala(2012)">2012</button>
+        <button  onclick="lala(2009)">2009</button>
+        <button  onclick="lala(2006)">2006</button>

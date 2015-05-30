@@ -174,7 +174,7 @@ yang paling besar di dunia. Hal ini semakin memperparah tingkat kemiskinan dan k
     <span class="glyphicon glyphicon-globe"></span> Langkah kecil dari <span>Kita</span> untuk <span>Mereka</span>
   <div class="container">
   	<div class="row">
-        <div class="col-sm-2 text-right"><a href="#box1" class="footer-judul">Pweb#3</a></div>
+        <div class="col-sm-2 text-right"><a href="#box1" class="footer-judul">FFA</a></div>
         <div class="col-sm-3 text-left">
         	<a href="#box2">Alasan Kami</a><br>
         	<a href="#box3">Penyebab Kelaparan di Afrika</a><br>

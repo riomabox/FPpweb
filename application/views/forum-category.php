@@ -1,3 +1,6 @@
+<?php
+    error_reporting(E_ALL & ~E_NOTICE);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +29,7 @@
 						Penjelasan Forum
 					</div>
 					<div class="col-sm-12 category-header">
-						<a href="">Paling Banyak dilihat</a><t>
-						<a href="">Paling Baru</a>
+						|
 					</div>
 					<?php
 						foreach ($thread as $thr) {

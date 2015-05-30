@@ -70,14 +70,20 @@ class Page extends CI_Controller {
 		$this->load->view('profile-overview.php',$this->data);
 	}
 
-	public function komen(){
-		
-		$this->load->view('profile-komentar.php');
+	public function komen($id){
+		$this->load->model('HomeModel');
+		$data = array();
+		$query = $this->HomeModel->profileKomen($id);
+		$data['komen'] = $query;
+		$this->load->view('profile-komentar.php', $data);
 	}
 
-	public function trit(){
-
-		$this->load->view('profile-thread.php');
+	public function trit($id){
+		$this->load->model('HomeModel');
+		$data = array();
+		$query = $this->HomeModel->profileTrit($id);
+		$data['thread'] = $query;
+		$this->load->view('profile-thread.php',$data);
 	}
 
 	public function posting(){
@@ -139,6 +145,12 @@ class Page extends CI_Controller {
         
 		 
     $this->HomeModel->add_data($data);
+        $this->forum();
+    }
+
+    public function logout(){
+        $this->load->library('session');
+        $this->load->view('logout');
         $this->forum();
     }
 }

@@ -22,6 +22,7 @@
 		foreach ($TS as $tees ) {
 			$gambarTS = $tees->user_pict;
 			$idTS = $tees->user_username;
+			$ididid = $tees->user_id;
 			$postTS = $tees->user_jumlah_post;
 		}
 		foreach ($thread as $thr) {
@@ -63,7 +64,7 @@
 							<br>
 							<span class="timestamp">
 								<!-- timestamp -->
-								Dimulai oleh <strong><?php echo $idTS;?></strong> pada <?php echo $tglT;?>
+								Dimulai oleh <strong><a href="<?php echo base_url();?>page/profile/$ididid" class="username"><?php echo $idTS;?></a></strong> pada <?php echo $tglT;?>
 							</span>
 						</div>
 					</div>
@@ -76,7 +77,7 @@
 							<!-- post TS -->
 								<div class="comment">
 									<div class="col-sm-11 c_head">
-										<?php echo $idTS;?>
+										<a href="<?php echo base_url();?>page/profile/$ididid" class="username"><?php echo $idTS;?></a>
 									</div>
 									<div class="col-sm-1 c_head text-right">
 										nomer
@@ -126,6 +127,7 @@
 										$isiU = $kom->comment_isi;
 										$pictU = $kom->user_pict;
 										$postU = $kom->user_jumlah_post;
+										$idididid = $kom->user_id;
 
 										$tglU = $kom->comment_tanggal;
 										$tglU = strtotime($tglU);
