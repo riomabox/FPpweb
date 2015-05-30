@@ -12,7 +12,7 @@
     <script src="<?php echo base_url(); ?>ckeditor/ckeditor.js" type="text/javascript"></script>
 </head>
 <body>
-	<?php include 'navbar_forum.php'; ?>
+	<?php foreach($posts as $post) { include 'navbar_forum.php'; ?>
 	<div id="group1">
 		<div id="loading">
 			<img src='<?php echo base_url(); ?>assets/images/preloader.GIF' width="100%" height="10px;" />
@@ -26,21 +26,24 @@
 								<div class="col-sm-2">
 									<div >
 										<?php 
-                                            $pict='HomeController/foto';
-echo $pict;
-                                         echo '<img class="gambarTS" src="data:image/jpeg;base64,'.base64_encode( $pict).'"/>';
+											
+          //                                $pict='HomeController/foto';
+										// echo $pict;
+                                         echo '<img class="gambarTS" src="data:image/jpeg;base64,'.base64_encode( $post->user_pict).'"/>';
                                         ?>
 									</div>
 									 <div class="list-group">
 									 
-									 <a href="#" class="list-group-item p-menu active" id="overview">Status</a>
-									 <a href="#" class="list-group-item p-menu" id="komentar">Komentar</a>
-									 <a href="#" class="list-group-item p-menu" id="thread">Judul Topik</a>
+										<a href="#" class="list-group-item p-menu active" id="overview">Status</a>
+										<a href="#" class="list-group-item p-menu" id="komentar">Komentar</a>
+										<a href="#" class="list-group-item p-menu" id="thread">Judul Topik</a>
 									</div>
 
 								</div>
+								<input type="hidden" id="userID" value="<?php echo $post->user_id;?>">
 								<div class="col-sm-10 profile-body">
-									<?php foreach($posts as $post)
+
+									<?php 
 										echo "
 									<div class='p-overview'>
 										<div class='profile-nama'>
@@ -96,7 +99,7 @@ echo $pict;
 											</div>
 										</div>
 									</div>
-									";?>
+									";}?>
 								</div>
 							</div>
 						</div>

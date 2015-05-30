@@ -1,6 +1,10 @@
+<?php
+// $userID = $('#userID').val();
+echo $id;
+echo "
 <div class='p-overview'>
 		<div class='profile-nama'>
-			ID user
+			ID User : $userID
 		</div>
 		Menjadi member sejak [tanggal daftar]
 		<div class='profile-last-active timestamp'>
@@ -31,18 +35,20 @@
 				x kali
 			</div>
 
-			<div class="col-sm-2 p-status-head text-right">
+			<div class=\"col-sm-2 p-status-head text-right\">
 				Umur
 			</div>
-			<div class="col-sm-10 p-status-column">
+			<div class=\"col-sm-10 p-status-column\">
 				x tahun
 			</div>
 
-			<div class="col-sm-2 p-status-head text-right">
+			<div class=\"col-sm-2 p-status-head text-right\">
 				Ulang Tahun
 			</div>
-			<div class="col-sm-10 p-status-column">
+			<div class=\"col-sm-10 p-status-column\">
 				dd-mm-yyyy
 			</div>
 		</div>
 	</div>
+";
+	?>

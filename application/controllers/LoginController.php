@@ -17,7 +17,7 @@ class LoginController extends CI_Controller{
             $this->load->view('forum-forum');
         }
         else{
-            redirect('HomeController/index');
+            redirect('page/forum');
         }
     }
     

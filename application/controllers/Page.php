@@ -7,32 +7,42 @@ class Page extends CI_Controller {
 	}
 
 	public function forum(){
-		$this->load->model('LoginModel');
-		$data = array();
-          if($query = $this->HomeModel->getData())
-         {
-             $data['records'] = $query;
-         }
-        
-     
-		$this->load->view('forum-forum.php',$data);
+		if(isset($_SESSION['username'])){
+			$this->load->model('LoginModel');
+			$data = array();
+			$query = $this->HomeModel->getData();
+			$data['posts'] = $query;
+			$this->load->view('forum-forum.php',$data);
+	     } else $this->load->view('forum-forum.php');		
 	}
 	
 	public function forumCat(){
-		$this->load->view('forum-category.php');
+		if(isset($_SESSION['username'])){
+			$this->load->model('LoginModel');
+			$data = array();
+			$query = $this->HomeModel->getData();
+			$data['posts'] = $query;
+			$this->load->view('forum-category.php',$data);
+	     } else $this->load->view('forum-category.php');
 	}
 
 	public function thread(){
-		$this->load->view('forum-thread.php');
+		if(isset($_SESSION['username'])){
+			$this->load->model('LoginModel');
+			$data = array();
+			$query = $this->HomeModel->getData();
+			$data['posts'] = $query;
+			$this->load->view('forum-thread.php',$data);
+	     } else $this->load->view('forum-thread.php');
 	}
 
-	public function profile(){
-		$this->data['posts']=$this->HomeModel->getData();
+	public function profile($id){
+		$this->data['posts']=$this->HomeModel->getProfileData($id);
 
 		$this->load->view('forum-profile.php',$this->data);
 	}
 
-	public function stats(){
+	public function stats(){ 
 		$this->load->view('profile-overview.php');
 	}
 
@@ -42,6 +52,16 @@ class Page extends CI_Controller {
 
 	public function trit(){
 		$this->load->view('profile-thread.php');
+	}
+
+	public function posting(){
+		if(isset($_SESSION['username'])){
+			$this->load->model('LoginModel');
+			$data = array();
+			$query = $this->HomeModel->getData();
+			$data['posts'] = $query;
+			$this->load->view('post-thread.php',$data);
+	     } else $this->load->view('post-thread.php');
 	}
 
 	 function create()

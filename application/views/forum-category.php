@@ -10,7 +10,13 @@
     <script src="<?php echo base_url(); ?>assets/js/scripts.js" type="text/javascript"></script>
 </head>
 <body>
-	<?php include 'navbar_forum.php'; ?>
+	<?php
+		if(isset($_SESSION['username'])){
+			foreach($posts as $post) { 
+				include 'navbar_forum.php';
+			};
+		} else include 'navbar_forum.php';
+	?>
 	<div id="group1">
 		<div class="container">
 			<div class="row">

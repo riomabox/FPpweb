@@ -47,6 +47,7 @@ $('#overview').click(function(){
     $.ajax({
         url: BASE_URL+'/FPpweb/page/stats', 
         type: 'POST',
+        data: { userId: $('#userID').val()},
         dataType: 'html',
         success: function(response){
          $('.profile-body').html(response);

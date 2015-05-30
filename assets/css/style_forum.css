@@ -323,3 +323,8 @@ body.modal-open{
 	height: 50px;
 	width: 100%
 }
+
+/*posting*/
+.post-thread{
+  padding: 10px;
+}

@@ -6,8 +6,8 @@
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li><a href="http://localhost/FPpweb/page/forum">Home</a></li>
-        <li><a href="http://localhost/FPpweb/page/index">Front Page</a></li>
+        <li><a href="http://localhost/FPpweb/page/forum">Forum</a></li>
+        <li><a href="http://localhost/FPpweb/page/index">Web</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <?php
@@ -17,11 +17,9 @@
       
         }   
         else{
-          $email = $_SESSION['username'];
 
-     echo '<li> <img class="c_foto" src="http://localhost/FPpweb/index.php/HomeController/foto"></li>';
-       echo ' <li><a href="http://localhost/FPpweb/page/profile">Profile</a></li>';
-       echo '<li>  <a href ="../LoginController/logout">Logout</a>';
+       echo ' <li><a href="'.base_url().'page/profile/'.$post->user_id.'">Profil</a></li>';
+       echo '<li>  <a href ="'.base_url().'LoginController/logout" id="kanan">Keluar</a>';
    
         }
          ?>
