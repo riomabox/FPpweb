@@ -17,7 +17,7 @@ class LoginController extends CI_Controller{
         $this->form_validation->set_rules('password','Password','required|callback_verifyUser');
         
         if($this->form_validation->run() == false){
-            $this->load->view('forum-category');
+            redirect('page/forum');
         }
         else{
             redirect('page/forum');
@@ -50,7 +50,7 @@ class LoginController extends CI_Controller{
                     $this->load->model('LoginModel');
                     $this->LoginModel->insert($signusername, $signemail, $signpassword);
                     $this->LoginModel->upload_photo($image, $image_name);
-                    $this->load->view('forum-category');
+                    redirect('page/forum');
                 }
             }
         }
@@ -71,11 +71,6 @@ class LoginController extends CI_Controller{
         }
     }
     
-    public function logout(){
-        $this->load->library('session');
-        $this->load->view('logout');
-        $this->load->view('forum-category');
-    }
 }
 
 ?>
